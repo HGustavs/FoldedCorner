@@ -1,0 +1,104 @@
+<html>
+<head>
+   <style>
+
+      .note {
+          position:relative;
+          width:480px;
+          padding:1em 1.5em;
+          margin:2em auto;
+          color:#fff;
+          overflow:hidden;
+          
+					background:#999868;
+      }   
+
+      .note:before {
+          content:"";
+          position:absolute;
+          top:0;
+          right:0px;
+          border-width:0 24px 24px 0; /* This trick side-steps a webkit bug */
+          border-style:solid;
+          display:block; width:0; /* Only for Firefox 3.0 damage limitation */
+          z-index:400;
+
+          /* Optional: shadow */
+          -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+          -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+          box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+
+					border-color:#fff #fff #BDBB8B #BDBB8B; 
+					background:#BDBB8B;
+      }              
+
+      .note.red {background:#C93213;}
+      .note.red:before {border-color:#fff #fff #97010A #97010A; background:#97010A;}
+
+      .note.blue {background:#53A3B4;}
+      .note.blue:before {border-color:#fff #fff transparent transparent; background:transparent;}
+
+      .note.taupe {}
+      .note.taupe:before {}
+
+body {
+   width: 240px;
+   margin: 0px auto;
+   padding: 40px 0 0;
+   background-color: #fff;
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+}
+
+a {color: #000;}
+
+.post {
+   margin: 0px 0px 40px;
+	 padding: 4px;
+   position: relative;
+   background-color: #fff;
+		box-shadow: 0 1px 3px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+}
+
+.folded-corner {
+   width: 0px;
+   height: 0px;
+   position: absolute;
+   top: -1px;
+   right: -1px;
+   border-width: 0;
+   border-style: solid;
+   background: hsla(260,5%,60%,0.2);
+   box-shadow: 2px -2px 0px #fff, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+   border-radius: 0 0 0 15px;
+   border-color: #fff #fff transparent transparent;
+   transition: border-width 0.2s ease-out;
+}
+
+.post:hover .folded-corner {border-width: 0 40px 40px 0;
+	
+}
+
+   </style>
+
+   <script>
+   </script>
+</head>
+<body>
+
+<section class="note">
+  <h2>Folded Corner</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, sunt, quidem suscipit...</p>
+</section>
+
+<div class="post photo">
+	<span class="folded-corner"></span>
+  <h2>Regular Flaticus</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, sunt, quidem suscipit voluptates voluptatum officia eaque asperiores accusamus consequatur dignissimos consequuntur incidunt aliquam dolore dolor at maxime explicabo animi nisi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aperiam, delectus praesentium animi recusandae dicta corporis adipisci quia a voluptatem nihil eum cum obcaecati maiores quod. Iusto, praesentium unde itaque.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, facere deleniti sint dolore officiis perferendis facilis rem voluptate iusto! Corporis, rem pariatur animi soluta vel totam repellat fuga! Nisi, exercitationem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, voluptatum, ullam, veniam beatae voluptates molestiae dolore recusandae ab consequatur totam at ipsam hic laborum iusto esse deserunt fugiat cum corrupti!</p>
+
+</div>
+
+      
+</body>
+</html>
